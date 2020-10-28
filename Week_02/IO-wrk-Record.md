@@ -117,3 +117,39 @@ Running 30s test @ http://localhost:8803
 Requests/sec:    123.83
 Transfer/sec:     32.15KB
 ````
+
+#### netty
+````
+netty - 8线程压测
+wrk -t8 -c40 -d30s http://localhost:8808/test
+Running 30s test @ http://localhost:8808/test
+  8 threads and 40 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.54ms   13.98ms 279.74ms   99.00%
+    Req/Sec   204.82     20.56   252.00     83.81%
+  48724 requests in 30.10s, 5.06MB read
+Requests/sec:   1618.54
+Transfer/sec:    172.29KB
+
+netty - 16线程压测
+wrk -t16 -c40 -d30s http://localhost:8808/test
+Running 30s test @ http://localhost:8808/test
+  16 threads and 40 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.65ms   17.45ms 344.41ms   99.19%
+    Req/Sec    82.38      8.32   101.00     86.74%
+  39224 requests in 30.10s, 4.08MB read
+Requests/sec:   1303.20
+Transfer/sec:    138.72KB
+
+netty - 24线程压测
+wrk -t24 -c40 -d30s http://localhost:8808/test
+Running 30s test @ http://localhost:8808/test
+  24 threads and 40 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    24.89ms   10.95ms 273.13ms   99.51%
+    Req/Sec    41.07      4.66    50.00     80.17%
+  29528 requests in 30.09s, 3.07MB read
+Requests/sec:    981.42
+Transfer/sec:    104.47KB
+````
