@@ -7,8 +7,8 @@
  ：** 网关增强
 - **[RandomHttpEndpointRouter](./src/main/java/shenge/netty/gateway/router/RandomHttpEndpointRouter.java)：** 网关路由
 
-
-
+#### 第一（必做）、三（必做）、四（选做）已经提交
+#### 第二（选做）使用Netty clien代替访问后端服务逻辑没有处理
 
 
 
